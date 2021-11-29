@@ -464,4 +464,9 @@ class PhoneNumberKitTests: XCTestCase {
             }
         }
     }
+
+    func testValidMXNumber() throws {
+        let parsed = try phoneNumberKit.parse("+529902023425")
+        XCTAssertEqual(parsed.nationalNumber, 9902023425)
+    }
 }
